@@ -20,7 +20,7 @@ resource "google_app_engine_standard_app_version" "default" {
 
   deployment {
     zip {
-      source_url = google_storage_bucket_object.app_files.self_link
+      source_url = "https://storage.googleapis.com/${google_storage_bucket.app_bucket.name}/${google_storage_bucket_object.app_files.name}"
     }
   }
 

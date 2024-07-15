@@ -6,7 +6,7 @@ provider "google" {
 
 terraform {
   backend "gcs" {
-    bucket = var.bucket_name
+    bucket = "terraform-state-file-georgik16-new-python-v1"
     prefix = "terraform-state"
   }
 }
